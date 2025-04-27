@@ -25,4 +25,5 @@ def get_time_and_ip():
 
 if __name__ == '__main__':
     # Make sure to use 0.0.0.0 to allow external connections
-    app.run(host='0.0.0.0', port=5002)
+    app.run(host='0.0.0.0', port=5002, debug=True)
+

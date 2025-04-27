@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application directory
-COPY SimpleTimeService/ SimpleTimeService/
+COPY . .
 
 # Set permissions for the application directory
 RUN chown -R appuser:appuser /app
@@ -24,4 +24,4 @@ USER appuser
 EXPOSE 5002
 
 # Command to run the application
-CMD ["python", "SimpleTimeService/app.py"]
+CMD ["python", "app.py"]
